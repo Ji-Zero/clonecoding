@@ -1,0 +1,94 @@
+:root{
+    --text-color: #202083;
+    --back-ground-color: #ffffe0;
+    --logo-color: #f36513;
+}
+body{
+    font-family: Oswald;
+    margin: 0px;
+}
+i{
+    color: var(--logo-color);
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--back-ground-color);
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    
+}
+.navbar_logo{
+    padding-left:30px;
+    font-size: 28px;
+}
+.navbar_menu{
+    display:flex;
+    padding-left: 0px;
+    
+}
+.navbar_menu li{
+    list-style-type: none;
+    padding: 8px 20px;
+    
+}
+.navbar_menu li:hover{
+    background-color: #ffecb3;
+    border-radius: 8px;
+}
+.navbar_icon{
+    display: flex;
+    padding-right: 30px;
+}
+.navbar_icon li{
+    list-style-type: none;
+    padding: 8px 10px;
+}
+
+.navbar_toogle{
+    display: none;
+    position: absolute;
+    right: 15px;
+    top:5px;
+    font-size: 25px;
+    
+}
+@media screen and (max-width:680px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar{
+        padding: 0 0 5 20px;
+    }
+    .navbar_menu li{
+        width: 100%;
+        
+    }
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .navbar_icon{
+        display: none;
+        justify-content: center;
+        width: 100%;
+        padding-left: 0px;
+    }
+    .navbar_toogle{
+        display: block;
+    
+    }
+    .navbar_menu.active,
+    .navbar_icon.active {
+        display: flex;
+    }
+
+}

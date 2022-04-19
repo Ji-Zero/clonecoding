@@ -1,0 +1,226 @@
+:root{
+    /*color*/
+    --white-color:#ffffff;
+    --black-color:#000000;
+    --blue-color:#0039cb;
+    --red-color:#d50000;
+    --gray-dark-color:#9c9c9c;
+    --gray-light-color:#eeeeee;
+    
+    /*size*/
+--padding: 12px;
+--avatar-size: 36px;
+
+    /*Font Size*/
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+*{
+    padding: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Roboto';
+    margin: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+button, button:focus{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--white-color);
+}
+/*header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    background: var(--black-color);
+    color: var(--white-color);
+}
+header .logo{
+    font-size: var(--font-large);
+}
+
+header .logo i{
+    color: var(--red-color);
+}
+header .search .fa-magnifying-glass{
+    margin-right: var(--padding);
+}
+
+/*video*/
+.player{
+    text-align: center;
+    background-color: var(--black-color);
+    position: sticky;
+    top: 0;
+}
+.player video{
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+}
+/*video info*/
+body > .info{
+    padding: var(--padding);
+}
+.info .metadata{
+    padding: 0 var(--padding);
+}
+.info .metadata .hashtag {
+    display: flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+
+.info .metadata .hashtag li{
+    margin-right: var(--padding);
+}
+.info .metadata .titleandbutton{
+    display: flex;
+}
+.info .metadata .titleandbutton .title{
+    font-size:  var(--font-medium);
+    margin-right: var(--padding);
+}
+.info .metadata .titleandbutton .title.clamp{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.info .metadata .titleandbutton .moreBtn{
+    height: 100%;
+    transition: transform 300ms ease-in-out;
+}
+.info .metadata .titleandbutton .moreBtn.clicked {
+    transform: rotate(180deg);
+}
+.info .metadata .view{
+    font-size: var(--font-small);
+    color: var(--gray-dark-color);
+}
+.info .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--padding) 0;
+}
+.info .buttons button{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);
+    color: var(--gray-dark-color);
+
+}
+.info .buttons i{
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding) / 2);
+    font-size: 16px;
+}
+
+.info .buttons button i.active {
+    color: var(--blue-color);
+}
+
+/*channel description*/
+.channel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--gray-light-color);
+    border-bottom: 1px solid var(--gray-light-color);;
+    
+}
+.info .channel .metadata{
+    display: flex;
+    align-items: center;
+}
+.info .channel .metadata .info{
+    display: flex;
+    flex-direction: column;
+}
+
+.info .channel .metadata img{
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+}
+.info .channel .metadata .info .name{
+    font-size: var(--font-medium);
+}
+.info .channel .metadata .info .subscribers{
+    font-size: var(--font-small);
+    color: var(--gray-dark-color);
+}
+.info .channel .subscribe{
+    text-transform: uppercase;
+    color: var(--red-color);
+    fo
+    font-size: var(--font-medium);
+}
+/*up next*/
+.next{
+    padding: 0 var(--padding);
+}
+.next > .title{
+    font-size: var(--font-medium);
+    color: var(--gray-dark-color);
+    margin-bottom: calc(var(--padding));
+}
+.next .item{
+    display: flex;
+    margin-top: var(--padding);
+}
+.next .item .img{
+    flex: 1 1 35%;
+    margin-right: var(--padding);
+
+}
+.next .item .info{
+    flex: 1 1 60%;
+
+
+}
+.next .item .moreBtn{
+    flex: 1 1 5%;
+
+
+}
+.next .item .img img{
+    width: 100%;
+}
+.next .item .info{
+    display: flex;
+    flex-direction: column;
+}
+.next .item .info .title{
+    font-size: var(--font-small);
+}
+.next .item .info .name,
+.next .item .info .views {
+    font-size: var(--font-micro);
+    color: var(--gray-dark-color);
+}
+
+.inforandnext{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 760px) 
+{
+    .nforandnext{
+        flex-direction: row;
+        margin: var(--padding) 0;
+    }
+    
+}
